@@ -1,0 +1,109 @@
+@import 'reset';
+
+//*********** COLORS ***********//
+//background
+$background-color: #29363b;
+
+//button
+$primary-btn-color: #f6827a;
+$secondary-btn-color: #f7ba86;
+$tertiary-btn-color: #ec475c;
+
+//text
+$primary-text-color: #ffffff;
+$secondary-text-color: #60696d;
+
+//*****************************//
+
+//border
+$primary-border: 1px solid rgba(0,0,0, 0.5);
+//font
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;500,700&display=swap');
+
+//font variables
+$jost: 'Jost', sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+html {
+    padding: 25px;
+}
+
+body {
+    width: 260px;
+    height: 505px;
+}
+
+p {
+    font-family: $jost;
+    font-weight: 300;
+    font-size: 20px;
+    color: $primary-text-color;
+}
+
+.display {
+    height: 35%;
+    background-color: $background-color;
+    padding: 25px;
+    text-align: right;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    .calc {
+        height: 25%;
+        p {
+            color: $secondary-text-color;
+        }
+    }
+
+    .result {
+        height: 75%;
+        display: flex;
+        align-items: center;
+        p {
+            width: 100%;
+            font-size: 50px;
+            font-weight: 500;
+        }
+    }
+}
+
+.input {
+    display: flex;
+    height: 65%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    .row {
+        height: 25%;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: stretch;
+        border-bottom: $primary-border;
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 25%;
+            background-color: $primary-btn-color;
+
+            &--alt {
+                background-color: $tertiary-btn-color;
+            }
+            &--operator {
+                background-color: $secondary-btn-color;
+            }
+
+            &--double {
+                flex-grow: 2;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
