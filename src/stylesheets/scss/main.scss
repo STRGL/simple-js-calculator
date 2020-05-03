@@ -35,7 +35,7 @@ body {
     height: 505px;
 }
 
-p {
+a,p {
     font-family: $jost;
     font-weight: 300;
     font-size: 20px;
@@ -57,15 +57,23 @@ p {
             color: $secondary-text-color;
         }
     }
-
+    
     .result {
         height: 75%;
         display: flex;
         align-items: center;
         p {
+            text-overflow: ellipsis;
             width: 100%;
             font-size: 50px;
             font-weight: 500;
+        }
+    }
+
+    .calc, .result {
+        overflow: hidden;
+        p {
+            text-overflow: ellipsis;
         }
     }
 }
