@@ -1,11 +1,11 @@
-export let calc = document.querySelector('.calc p');
-export let result = document.querySelector('.result p');
+export const calc = document.querySelector('.calc p');
+export const result = document.querySelector('.result p');
 
-let multiply = 215;
-let divide = 247;
-let subtract = 8722;
-let add = 43;
-let decimal = 46;
+const multiply = 215;
+const divide = 247;
+const subtract = 45;
+const add = 43;
+const decimal = 46;
 
 function multiplicationAndDivision(array) {
     let operand;
@@ -18,7 +18,7 @@ function multiplicationAndDivision(array) {
     } else {
         operand = array.indexOf('*') < array.indexOf('/') ? '*' : '/';
     }
-    let i = array.indexOf(operand);
+    const i = array.indexOf(operand);
     let prev = array[i - 1];
     let next = array[i + 1];
     let firstArr = array.slice(0, i);
@@ -94,11 +94,9 @@ export function clear() {
 
 export function calculate(stringEquation) {
     try {
-
         let compiled = [];
         let count = 0;
         let broken = stringEquation.trim().split('');
-
         for (let i = 0; i < broken.length; i++) {
             let code = broken[i].charCodeAt();
             //check if it's a digit between 0-9
@@ -136,7 +134,7 @@ export function calculate(stringEquation) {
                 count++;
             }
         }
-
+        console.log(compiled);
         //replace string of numbers with numbers
         compiled = compiled.map(portion => {
             if (Number(portion) === Number(portion)) {
@@ -147,6 +145,8 @@ export function calculate(stringEquation) {
                 return getOperand(portion);
             }
         });
+
+        console.log(compiled);
 
         compiled = multiplicationAndDivision(compiled);
         compiled = additionAndSubtraction(compiled);
