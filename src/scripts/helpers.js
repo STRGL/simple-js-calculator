@@ -28,7 +28,7 @@ function multiplicationAndDivision(array) {
     if (operand === '*') {
         secArr.unshift(prev * next);
     } else {
-        secArr.unshift(prev * next);
+        secArr.unshift(prev / next);
     }
 
     return multiplicationAndDivision([...firstArr, ...secArr]);
@@ -71,16 +71,12 @@ function getOperand(char) {
     switch (char.charCodeAt()) {
         case multiply:
             return '*';
-            break;
         case divide:
             return '/';
-            break;
         case add:
             return '+';
-            break;
         case subtract:
             return '-';
-            break;
         default:
             break;
     }
@@ -151,7 +147,7 @@ export function calculate(stringEquation) {
         compiled = multiplicationAndDivision(compiled);
         compiled = additionAndSubtraction(compiled);
 
-        console.log(compiled);
+        console.log('Compiled: ', compiled);
         if (compiled.length === 1) return compiled[0];
         throw "Failed to compute";
     } catch (error) {
