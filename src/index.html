@@ -1,90 +1,89 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <title>Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
 
-<body>
-    <div class="display">
-        <header class="calc">
-            <p></p>
-        </header>
-        <div class="result">
-            <p>0</p>
+    <body>
+        <div class="display">
+            <header class="calc">
+                <p></p>
+            </header>
+            <div class="result">
+                <p>0</p>
+            </div>
         </div>
-    </div>
-    <main class="input">
-        <div class="row">
-            <a class="btn btn--alt" id="clear">
-                AC
-            </a>
-            <a class="btn btn--alt btn--double" id="save">
-                SAVE
-            </a>
-            <a class="btn btn--operator">
-                &divide;
-            </a>
-        </div>
-        <div class="row">
-            <a class="btn">
-                .
-            </a>
-            <a class="btn">
-                0
-            </a>
-            <a class="btn">
-            </a>
-            <a class="btn btn--operator">
-                &times;
-            </a>
-        </div>
-        <div class="row">
-            <a class="btn">
-                1
-            </a>
-            <a class="btn">
-                2
-            </a>
-            <a class="btn">
-                3
-            </a>
-            <a class="btn btn--operator">
-                -
-            </a>
-        </div>
-        <div class="row">
-            <a class="btn">
-                4
-            </a>
-            <a class="btn">
-                5
-            </a>
-            <a class="btn">
-                6
-            </a>
-            <a class="btn btn--operator">
-                &plus;
-            </a>
-        </div>
-        <div class="row">
-            <a class="btn">
-                7
-            </a>
-            <a class="btn">
-                8
-            </a>
-            <a class="btn">
-                9
-            </a>
-            <a class="btn btn--operator" id="equal">
-                &equals;
-            </a>
-        </div>
-    </main>
+        <main class="input">
+            <div class="row">
+                <a class="btn btn--alt" id="clear">
+                    AC
+                </a>
+                <a class="btn btn--alt btn--double" id="save">
+                    SAVE
+                </a>
+                <a class="btn btn--operator" data-operator="/">
+                    &divide;
+                </a>
+            </div>
+            <div class="row">
+                <a class="btn">
+                    .
+                </a>
+                <a class="btn">
+                    0
+                </a>
+                <a class="btn"></a>
+                <a class="btn btn--operator" data-operator="*">
+                    &times;
+                </a>
+            </div>
+            <div class="row">
+                <a class="btn">
+                    1
+                </a>
+                <a class="btn">
+                    2
+                </a>
+                <a class="btn">
+                    3
+                </a>
+                <a class="btn btn--operator" data-operator="-">
+                    -
+                </a>
+            </div>
+            <div class="row">
+                <a class="btn">
+                    4
+                </a>
+                <a class="btn">
+                    5
+                </a>
+                <a class="btn">
+                    6
+                </a>
+                <a class="btn btn--operator" data-operator='+'>
+                    &plus;
+                </a>
+            </div>
+            <div class="row">
+                <a class="btn">
+                    7
+                </a>
+                <a class="btn">
+                    8
+                </a>
+                <a class="btn">
+                    9
+                </a>
+                <a class="btn btn--operator" id="equal">
+                    &equals;
+                </a>
+            </div>
+        </main>
 
-</body>
+    </body>
 
 </html>
